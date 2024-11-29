@@ -78,3 +78,7 @@ func addressChecksum(b []byte) (cs [wavesAddressChecksumSize]byte, err error) {
 	copy(cs[:], h[:wavesAddressChecksumSize])
 	return cs, nil
 }
+
+func AddressChecksum(b []byte) (cs [wavesAddressChecksumSize]byte, err error) {
+	return addressChecksum(b)
+}
